@@ -29,4 +29,5 @@
 
 /usr/bin/rclone copy --update --verbose --transfers 30 --checkers 8 --contimeout 60s --timeout 300s --retries 3 --low-level-retries 10 --bwlimit 200k --stats 1s "/home/mukesh/Downloads/cloud" "gdrive:backup"
 
-
+# notify-send uses icon from the /usr/share/icons/gnome/32x32 (& also /usr/share/notify-osd/icons/...)
+notify-send -u critical -i "notification-message-IM" 'Boss !!' 'Am done with the execution'
