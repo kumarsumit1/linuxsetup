@@ -31,6 +31,121 @@ export PATH=$JAVA_HOME/bin:$PATH
 add above two lines and source /etc/profile or reboot the system for changes to take effect
 
 
+# Install Pip
+
+sudo apt update
+sudo apt install python3-pip
+pip3 --version
 
 
 
+
+
+# Remove a software
+
+$sudo apt-get purge pip3
+
+$sudo apt-get autoremove
+
+
+# Install Eclipse
+
+Download Eclipse
+
+
+$tar -zxvf eclipse-jee-photon-R-linux-gtk-x86_64.tar.gz -C /opt
+
+Simply create an eclipse binary symbolic link to make it accessible system-wide.
+
+ln -s /opt/eclipse/eclipse /usr/local/bin/eclipse
+
+Configure Eclipse Launcher
+
+vim /usr/share/applications/eclipse.desktop
+
+Add the entry to file and save it.
+
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Eclipse
+GenericName=Eclipse IDE
+Comment=Integrated Development Environment
+Exec=/usr/local/bin/eclipse
+Icon=/opt/eclipse/icon.xpm
+Terminal=false
+Type=Application
+StartupNotify=false
+NoDisplay=false
+Categories=Development;IDE;
+
+
+
+
+# Install VS Code
+
+Download debian package from :
+https://code.visualstudio.com/download
+
+
+# Install Dbeaver 
+
+Download debain package from :
+
+https://dbeaver.io/download/
+
+
+# Install Docker by addding repositry
+
+Uninstall old versions
+$ sudo apt-get remove docker docker-engine docker.io containerd runc
+
+It’s OK if apt-get reports that none of these packages are installed.
+
+Note :
+  While set up the repository
+
+$ sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+   
+The above command uses lsb_release -cs which in elementry doesnt correspond to its respective Ubuntu codename
+Hence using below command figure out the codename of ubuntu and replace it with the code $(lsb_release -cs) 
+
+$lsb_release -au
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 18.04.4 LTS
+Release:	18.04
+Codename:	bionic
+
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   bionic \
+   stable"
+
+
+
+
+If you want to run docker as non-root user then you need to add it to the docker group.
+
+    Create the docker group if it does not exist
+
+$ sudo groupadd docker
+
+    Add your user to the docker group.
+
+$ sudo usermod -aG docker $USER
+
+    Run the following command or Logout and login again and run (that doesn't work you may need to reboot your machine first)
+
+$ newgrp docker
+
+    Check if docker can be run without root
+
+$ docker run hello-world
+
+Note : To check user has been added in the group
+
+$ groups $USER
