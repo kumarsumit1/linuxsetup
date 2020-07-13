@@ -146,6 +146,6 @@ $ newgrp docker
 
 $ docker run hello-world
 
-Note : To check user has been added in the group
+  Note : To check user has been added in the group
 
 $ groups $USER
