@@ -45,7 +45,7 @@ sudo apt update
 sudo apt install python3-pip
 pip3 --version
 
-
+sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
 
 
 
