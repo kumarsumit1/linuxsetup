@@ -4,22 +4,22 @@
 
 Download JDK from :
 
-https://www.oracle.com/java/technologies/javase-downloads.html
+  https://www.oracle.com/java/technologies/javase-downloads.html
 
 Install JDK :
-sudo apt install ./jdk-14.0.1_linux-x64_bin.deb 
+  sudo apt install ./jdk-14.0.1_linux-x64_bin.deb 
 
 
 Use the update-alternatives command to set the path to the Oracle Java executable: 
 
-$ sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk-14.0.1/bin/java 1
-$ sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk-14.0.1/bin/javac 1
-$ sudo update-alternatives --install /usr/bin/jps jps /usr/lib/jvm/jdk-14.0.1/bin/jps 1
+  $ sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk-14.0.1/bin/java 1
+  $ sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk-14.0.1/bin/javac 1
+  $ sudo update-alternatives --install /usr/bin/jps jps /usr/lib/jvm/jdk-14.0.1/bin/jps 1
 
 Confirm the Oracle Java installation: 
-$ java --version
+  $ java --version
 
-$ javac --version
+  $ javac --version
 
 Set JAVA_HOME path
 
@@ -30,6 +30,14 @@ export PATH=$JAVA_HOME/bin:$PATH
 
 add above two lines and source /etc/profile or reboot the system for changes to take effect
 
+# Change python3 to python
+check if there are any alternatives for python 
+
+$ sudo update-alternatives --config python
+
+If you get the error "no alternatives for python" then set up an alternative with the following command:
+
+$ sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 10
 
 # Install Pip
 
