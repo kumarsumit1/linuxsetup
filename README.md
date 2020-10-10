@@ -149,3 +149,13 @@ $ docker run hello-world
 Note : To check user has been added in the group
 
 $ groups $USER
+
+
+#Install Meld
+
+sudo apt-get install meld
+
+#Install Only office
+
+https://www.onlyoffice.com/en/download-desktop.aspx
+
