@@ -1,6 +1,20 @@
 # linuxsetup
 
+sudo apt update
+sudo apt dist-upgrade
+
+
 # Check Wifi Drivers
+
+Download the script from : https://github.com/UbuntuForums/wireless-info
+
+wget -N -t 5 -T 10 https://github.com/UbuntuForums/wireless-info/raw/master/wireless-info && \
+chmod +x wireless-info && \
+./wireless-info
+
+This will generate a text file with all the details of drivers.
+
+OR follow following steps 
 
 1. Check the wifi hardware 
 sudo lshw -C network
