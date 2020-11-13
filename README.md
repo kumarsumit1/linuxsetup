@@ -1,5 +1,18 @@
 # linuxsetup
 
+# Check Wifi Drivers
+
+1. Check the wifi hardware 
+sudo lshw -C network
+
+output would be something like :
+
+description: Network controller
+       product: BCM43142 802.11b/g/n
+       vendor: Broadcom Inc. and subsidiaries
+
+2. 
+
 # Install JDK oracle
 
 Download JDK from :
@@ -166,4 +179,25 @@ sudo apt-get install meld
 #Install Only office
 
 https://www.onlyoffice.com/en/download-desktop.aspx
+
+
+ 
+# Install Skype
+Skype is available from the official Microsoft Apt repositories. To install it, follow the steps below:
+
+    Open your terminal and download the latest Skype .deb package using the following wget command:
+
+    wget https://go.skype.com/skypeforlinux-64.deb
+
+    Once the download is complete, install Skype by running the following command as a user with sudo privileges :
+
+    sudo apt install ./skypeforlinux-64.deb
+
+    You will be prompted to enter your password.
+
+During the installation process, the official Skype repository will be added to your system. When a new version is released, you can update the Skype package through your desktop standard Software Update tool or by running the following commands in your terminal:
+
+sudo apt update
+sudo apt upgrade
+
 
