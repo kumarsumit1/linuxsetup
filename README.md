@@ -17,7 +17,11 @@ This will generate a text file with all the details of drivers.
 OR follow following steps 
 
 1. Check the wifi hardware 
-sudo lshw -C network
+
+    sudo lspci -nn | grep -i network
+    sudo lspci -v
+OR
+    sudo lshw -C network
 
 output would be something like :
 
@@ -26,6 +30,11 @@ description: Network controller
        vendor: Broadcom Inc. and subsidiaries
 
 2. 
+
+
+
+
+Note: All the network connection files are stored at /etc/NetworkManager/system-connections
 
 # Install JDK oracle
 
