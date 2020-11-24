@@ -1,8 +1,30 @@
 # linuxsetup
 
 sudo apt update
-sudo apt dist-upgrade
+sudo apt upgrade
 
+sudo apt dist-upgrade
+sudo apt full-upgrade
+
+
+# Working with Flatpak
+
+flatpak remotes
+
+flatpak list
+
+flatpak update
+
+
+flatpak repair --user && sudo flatpak reapir --system
+
+
+sudo flatpak repair
+
+flatpak uninstall [Application ID]
+
+
+flatpak uninstall --unused
 
 # Check Wifi Drivers
 
@@ -34,7 +56,15 @@ description: Network controller
 
 
 
-Note: All the network connection files are stored at /etc/NetworkManager/system-connections
+Note: 
+1. All the network connection files are stored at /etc/NetworkManager/system-connections
+2. Scan wifi networks
+    sudo iwlist scan
+3. List of all dirvers being used
+    sudo inxi -Fxz
+4. Check Blocking
+    sudo rfkill list       
+
 
 # Install JDK oracle
 
