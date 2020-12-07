@@ -51,7 +51,8 @@ description: Network controller
        product: BCM43142 802.11b/g/n
        vendor: Broadcom Inc. and subsidiaries
 
-2. 
+2. List all the wifi networks (Very nice tool) : network manager command line interface device wifi
+    nmcli device wifi
 
 
 
