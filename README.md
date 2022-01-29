@@ -295,4 +295,6 @@ Known Issues:
 1. Touch pad freeze
 2. Earphone mic
 3. Fractional scaling of display
-4. 
+4. Out of box support for fingerprint reader
+5. Hibernate/deep sleep feature
+6. 
