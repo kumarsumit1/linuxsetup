@@ -6,7 +6,22 @@ sudo apt upgrade
 sudo apt dist-upgrade
 sudo apt full-upgrade
 
+# Setup and check Deep Sleep:
 
+example of deep sleep disabled:
+
+```
+[jeremy@fwfedora ~]$ cat /sys/power/mem_sleep
+[s2idle] deep
+[jeremy@fwfedora ~]$
+```
+example of deep sleep enabled:
+
+```
+[root@fwfedora ~]# cat /sys/power/mem_sleep 
+s2idle [deep]
+[root@fwfedora ~]# ```
+```
 # Working with Flatpak
 
 flatpak remotes
