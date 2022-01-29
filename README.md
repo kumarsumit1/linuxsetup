@@ -22,6 +22,22 @@ example of deep sleep enabled:
 s2idle [deep]
 [root@fwfedora ~]# ```
 ```
+
+To enable deep sleep on Ubuntu 21.04 (kernel 5.11)
+
+    Find the following line in the /etc/default/grub file:
+    GRUB_CMDLINE_LINUX_DEFAULT=“quiet splash"
+
+    Change it to:
+    GRUB_CMDLINE_LINUX_DEFAULT=“quiet splash mem_sleep_default=deep”
+
+    Run sudo update-grub
+
+    Reboot
+    a. To verify, run the following from the terminal:
+    cat /sys/power/mem_sleep
+    b. If the output is s2idle [deep] then deep sleep is enabled (note the brackets are on “deep”)
+
 # Working with Flatpak
 
 flatpak remotes
