@@ -289,4 +289,4 @@ sudo apt upgrade
 1. Update BIOS : https://knowledgebase.frame.work/en_us/framework-laptop-bios-releases-S1dMQt6F 
 2. Improving battery usage : https://luisartola.com/solving-the-framework-laptop-battery-drain/
 3. Framework Guides  : https://guides.frame.work/ , Go to last section of how to that has installation guides.
-    Installation Guide Pop OS : https://guides.frame.work/Guide/Pop!_OS+21.10+Installation+on+the+Framework+Laptop/115?lang=en
+        Installation Guide Pop OS : https://guides.frame.work/Guide/Pop!_OS+21.10+Installation+on+the+Framework+Laptop/115?lang=en
